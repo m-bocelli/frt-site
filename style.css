@@ -1,0 +1,43 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 325px;
+    background: #FFFFFF;
+    font-family: 'Trispace', sans-serif;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.splash {
+    width: 100%;
+    height: 100vh;
+    background: #1d1d1d;
+    transition: 1s;
+}
+
+.splash-image {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*Center splash span elements*/
+}
+
+@keyframes eye {
+    0% {bottom: -500px;}
+    100% {bottom: 0}
+}
+
+
+.eye {
+    position: relative;
+    animation-name: eye;
+    animation-duration: 2s;
+}

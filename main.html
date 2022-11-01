@@ -4,25 +4,56 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Big Uncle</title>
-        <link rel="stylesheet" href="main.css"/>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Trispace&display=swap" rel="stylesheet">
+        <script>
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0);
+            }
+        </script>
     </head>
     <body>
-        <div class="splash" id="home">
-            <h1 class="splash-text">
+        <div class="splash">
+            <h1 class="splash-image">
                 <!--Using span instead of p since I think the offset looks interesting-->
-                <span class="eye"><a href="#landing">INSERT_EYE_HERE</a></span>
+                <span class="eye"><a href="#landing"><img src="eye.PNG"></a></span>
             </h1>
         </div>
 
+        <!--Navigation and header section-->
         <h2 class="title center-text" id="landing">Facial Recognition Technology</h2>
         <div class="nav center-text">
             <p>  
-                <a class="nav-link" href="#home">blah0</a>      
-                <a class="nav-link" href="#projects">blah1</a>
-                <a class="nav-link" href="#3D">blah2</a>
-                <a class="nav-link" href="#about">blah3</a>
+                <a class="nav-link" href="#use">USE</a>      
+                <a class="nav-link" href="#harm">HARM</a>
+                <a class="nav-link" href="#soltuions">SOLUTIONS</a>
+                <a class="nav-link" href="#survey">SURVEY</a>
             </p>
         </div>
 
+        
+        <div class="content">
+            <!--Overview of the uses of FRT and what it is-->
+            <section class="use-card" id="use">
+                <p class="section-title center-text"><b>Uses of FRT</b></p>
+            </section>
+
+            <!--Overview of the effects and harms of FRT use-->
+            <section class="harm-card" id="harm">
+                <p class="section-title center-text"><b>Harms of FRT</b></p>
+            </section>
+
+            <!--Solutions to the harmful effects of FRT-->
+            <section class="solutions-card" id="solutions">
+                <p class="section-title center-text"><b>Solutions and Prevention</b></p>
+            </section>
+
+            <!--Overview of our survey results and what they mean-->
+            <section class="survey-card" id="survey">
+                <p class="section-title center-text"><b>Survey Results</b></p>
+            </section>
+        </div>
     </body>
 </html>
