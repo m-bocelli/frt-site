@@ -4,12 +4,13 @@ html {
 
 body {
     min-width: 325px;
-    background: #FFFFFF;
+    background: floralwhite;
     font-family: 'Trispace', sans-serif;
     font-size: 16px;
     justify-content: center;
     align-items: center;
     margin: 0px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .center-text {
@@ -30,14 +31,76 @@ body {
     transform: translate(-50%, -50%); /*Center splash span elements*/
 }
 
-@keyframes eye {
-    0% {bottom: -500px;}
-    100% {bottom: 0}
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#1d1d1d;
 }
 
+.nav ul li {float: left;}
+
+.nav ul li.right {float: right;}
+
+.nav li a {
+    display: block;
+    text-decoration: none;
+    color: floralwhite;
+    padding: 24px;
+}
+
+.nav li a:hover {
+    background-color: floralwhite;
+    color:#1d1d1d;
+}
+
+.section-title {
+    font-size: 6rem;
+    margin-bottom: 0;
+}
+
+.section-card {
+    float: left;
+    width: 33.33%;
+    padding: 0px;
+}
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 .eye {
     position: relative;
-    animation-name: eye;
-    animation-duration: 2s;
+    animation: enterTop 2s, pulse 2s infinite;
+}
+
+.cam1 {
+    right: 0;
+    position: absolute;
+    transform-origin: top right;
+    animation: rotate 4s infinite;
+}
+
+@keyframes rotate {
+    0% {transform: rotate(30deg);}
+    50% {transform: rotate(-10deg);}
+    100% {transform: rotate(30deg);}
+}
+
+@keyframes enterTop {
+    0% {top: -500px;}
+    100% {top: 0px;}
+}
+
+@keyframes pulse {
+	0% {transform: scale(0.85);}
+	50% {transform: scale(1);}
+	100% {transform: scale(0.85);}
+}
+
+@media (max-width: 600px) {
+    .nav li, .nav li.right {float: none;}
 }
