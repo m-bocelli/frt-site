@@ -1,3 +1,4 @@
+/* Base styling */
 html {
     scroll-behavior: smooth;
 }
@@ -14,6 +15,7 @@ body {
     text-align: center;
 }
 
+/* Splash and nav styling */
 .splash {
     width: 100%;
     height: 100vh;
@@ -65,9 +67,10 @@ h1 {
     color:#1d1d1d;
 }
 
+/* General section styling */
 .use1, .use2, 
 .harm, .solutions, 
-.survey, .about {
+.survey, .sources {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,8 +125,12 @@ p {
     width: 50%;
 }
 
-.use2 {
-    
+td {
+    padding: 10px;
+}
+
+td img {
+    width: 13rem;
 }
 
 .use2 p {
@@ -132,11 +139,7 @@ p {
 
 .harm {
     background: #fff;
-    clip-path: polygon(0 0%, 100% 0, 100% 88%, 0% 100%);
-}
-
-.solutions {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 88%);
+    clip-path: polygon(0 12%, 100% 0, 100% 88%, 0% 100%);
 }
 
 .solutions p{
@@ -145,26 +148,38 @@ p {
 
 .survey {
     background: #fff;
+    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
 }
 
-.about p{
+.sources p{
     color: #fff;
 }
 
-
+/* Animated divs */
 .eye {
     position: relative;
     animation: enterTop 2s, pulse 2s infinite;
 }
 
-.cam1 {
-    background: #fff;
-    right: 0;
-    position: absolute;
-    transform-origin: top right;
-    /*animation: rotate 4s infinite;*/
+.eye img {
+    width:20rem;
 }
 
+.cam1 {
+    z-index: 2;
+    position: absolute;
+    right: 30px;
+    transform-origin: top right;
+    animation: rotate 4s infinite;
+}
+
+.cam1 img {
+    width: 15rem;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Animations */
 @keyframes rotate {
     0% {transform: rotate(30deg);}
     50% {transform: rotate(-10deg);}
@@ -182,14 +197,79 @@ p {
 	100% {transform: scale(0.85);}
 }
 
+/* Mobile responsive styling */
+@media (max-width: 1380px) {
+    thead {
+        display: none;
+    }
+
+    td {
+        display: block;
+    }
+
+    td:first-child::before{
+        content: "AIRPORTS";
+    }
+    
+    td:nth-child(2)::before {
+        content: "BANKING";
+    }
+
+    td:nth-child(3)::before {
+        content: "HEALTHCARE";
+    }
+    td:nth-child(4)::before {
+        content: "LAW ENFORCEMENT";
+    }
+    td:nth-child(5)::before {
+        content: "PHONES";
+    }
+    td:nth-child(6)::before {
+        content: "RETAIL STORES";
+    }
+
+    td {
+        text-align: right;
+    }
+
+    td::before {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+        color: #fff;
+        float: left;
+        font-weight: bold;
+        margin-top: 1rem;
+        margin-bottom: .8rem;
+    }
+}
+
+
+@media (max-width: 930px) {
+    .cam1 {
+        right: 30px;
+    }
+    .cam1 img {
+        width: 8rem;
+    }
+}
+
+
 @media (max-width: 600px) {
     .nav li, .nav li.right {float: none;}
     .end {
         margin-bottom: 3rem;
     }
+
     .use1, .use2,
     .harm, .solutions,
-    .survey, .about {
+    .survey, .sources {
         clip-path: none;
+    }
+
+    .cam1 {
+        right: 30px;
+    }
+    .cam1 img {
+        width: 5rem;
     }
 }
