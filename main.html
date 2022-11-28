@@ -89,61 +89,49 @@
 
             <section class="use2">
                 <p class="section-title">Common Uses</p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <td><img src="images/airport.png"></td>
-                                <td><img src="images/bank.jpg"></td>
-                                <td><img src="images/health.png"></td>
-                                <td><img src="images/law.jpg"></td>
-                                <td><img src="images/phone.jpg"></td>
-                                <td><img src="images/retail.jpg"></td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-label="AIRPORTS">
-                                    <p class="description" style="width: 13rem;">
-                                        Airports have begun to utilize FRT to collect biometric data on travelers for security purposes. In fact,
-                                        the Department of Homeland Security estimates that FRT will be used on approximately 97% of travelers by 2023 (Frew 2019).
-                                    </p>
-                                </td>
-                                <td data-label="BANKING">
-                                    <p class="description" style="width: 13rem;">
-                                        Banking apps, such as Wells Fargo and Disocver, have begun to use face verification to allow
-                                        users to streamline their logon experience.
-                                    </p>
-                                </td>
-                                <td data-label="HEALTHCARE">
-                                    <p class="description" style="width: 13rem;">
-                                        Some healthcare softwares have been developed which allow easier access to patient records,
-                                        patient registration, and even pain/emotional detection through use of FRTs.
-                                    </p>
-                                </td>
-                                <td data-label="LAW ENFORCEMENT">
-                                    <p class="description" style="width: 13rem;">
-                                        Law enforcement often utilizes security cameras and 1-to-many comparisons to identify 
-                                        faces of recorded suspects. Mugshots are used as the comparison gallery to derive face prints.
-                                        More on this in the "Harm" section...
-                                    </p>
-                                </td>
-                                <td data-label="PHONES">
-                                    <p class="description" style="width: 13rem;">
-                                        If you've subscribed to Apple's "FaceID", then you are engaging in face verification everyday!
-                                        Your phone saves your face print in order to perform a 1-to-1 comparison at every unlock.
-                                    </p>
-                                </td>
-                                <td data-label="RETAIL STORES">
-                                    <p class="description" style="width: 13rem;">
-                                        FRT is said to have the "potential" to streamline the retail experience, with ambitions such as
-                                        payment through face verification and product suggestion based on recurring faces.
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="description end"></p>
-     
+                <div class="use-table">
+                    <div class="use-item"><img src="images/airport.png" class="responsive"><p class="description" style="width: 13rem;">
+                        Airports have begun to utilize FRT to collect biometric data on travelers for security purposes. In fact,
+                        the Department of Homeland Security estimates that FRT will be used on approximately 97% of travelers by 2023 (Frew 2019).
+                        </p>
+                    </div>
+                    <div class="use-item">
+                        <img src="images/bank.png" class="responsive">
+                        <p class="description" style="width: 13rem;">
+                            Banking apps, such as Wells Fargo and Disocver, have begun to use face verification to allow
+                            users to streamline their logon experience.
+                        </p>
+                    </div>
+                    <div class="use-item">
+                        <img src="images/health.png" class="responsive">
+                        <p class="description" style="width: 13rem;">
+                            Some healthcare softwares have been developed which allow easier access to patient records,
+                            patient registration, and even pain/emotional detection through use of FRTs.
+                        </p>
+                    </div>
+                    <div class="use-item">
+                        <img src="images/law.jpg" class="responsive">
+                        <p class="description" style="width: 13rem;">
+                            Law enforcement often utilizes security cameras and 1-to-many comparisons to identify 
+                            faces of recorded suspects. Mugshots are used as the comparison gallery to derive face prints.
+                            More on this in the "Harm" section...
+                        </p>
+                    </div>
+                    <div class="use-item">
+                        <img src="images/phone.png" class="responsive">
+                        <p class="description" style="width: 13rem;">
+                            If you've subscribed to Apple's "FaceID", then you are engaging in face verification everyday!
+                            Your phone saves your face print in order to perform a 1-to-1 comparison at every unlock.
+                        </p>
+                    </div>
+                    <div class="use-item">
+                        <img src="images/retail.png" class="responsive">
+                        <p class="description" style="width: 13rem;">
+                            FRT is said to have the "potential" to streamline the retail experience, with ambitions such as
+                            payment through face verification and product suggestion based on recurring faces.
+                        </p>
+                    </div> 
+                </div>
             </section>
 
             <!--Overview of the effects and harms of FRT use-->
@@ -155,8 +143,8 @@
                         In addition to the common argument against FRT in regards to privacy concerns, there exists a plethora of other harmful aspects which particulary affect marginalized
                         communities and should be considered foremost. Research has shown a presence of racial discrimination in FRT systems on a technical level. 
                         For instance, according to an empirical analysis on FRT use when identifying emotions across different ethnicities, both Microsoft and Face++ FRTs score black faces 
-                        as having a “lower level of happiness” than white faces (Rhue 2018). Furthermore, Face++, who claim to have “Industry-leading accuracy, in real-world applications” 
-                        (“Face++ Cognitive Sciences”), rates black faces as significantly more angry on average than white faces. Microsoft exhibits the same prejudice in terms of recognizing contempt.
+                        as having a <span style="color: red;">“lower level of happiness”</span> than white faces (Rhue 2018). Furthermore, Face++, who claim to have “Industry-leading accuracy, in real-world applications” 
+                        (“Face++ Cognitive Sciences”), rates black faces as significantly <span style="color: red;">more angry on average</span> than white faces. Microsoft exhibits the same prejudice in terms of recognizing contempt.
                     </p>
                 </div>
                 <div class="section-card">

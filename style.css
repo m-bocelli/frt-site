@@ -125,12 +125,16 @@ p {
     width: 50%;
 }
 
-td {
-    padding: 10px;
+.use-item {
+    display: inline-block;
+    margin: 30px;
+    vertical-align: top;
 }
 
-td img {
-    width: 13rem;
+.responsive {
+    max-width: 13rem;
+    height: auto;
+    border: 12px solid salmon;
 }
 
 .use2 p {
@@ -197,53 +201,6 @@ td img {
 	100% {transform: scale(0.85);}
 }
 
-/* Mobile responsive styling */
-@media (max-width: 1380px) {
-    thead {
-        display: none;
-    }
-
-    td {
-        display: block;
-    }
-
-    td:first-child::before{
-        content: "AIRPORTS";
-    }
-    
-    td:nth-child(2)::before {
-        content: "BANKING";
-    }
-
-    td:nth-child(3)::before {
-        content: "HEALTHCARE";
-    }
-    td:nth-child(4)::before {
-        content: "LAW ENFORCEMENT";
-    }
-    td:nth-child(5)::before {
-        content: "PHONES";
-    }
-    td:nth-child(6)::before {
-        content: "RETAIL STORES";
-    }
-
-    td {
-        text-align: right;
-    }
-
-    td::before {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.5rem;
-        color: #fff;
-        float: left;
-        font-weight: bold;
-        margin-top: 1rem;
-        margin-bottom: .8rem;
-    }
-}
-
-
 @media (max-width: 930px) {
     .cam1 {
         right: 30px;
@@ -264,6 +221,10 @@ td img {
     .harm, .solutions,
     .survey, .sources {
         clip-path: none;
+    }
+
+    .use-item {
+        display: block;
     }
 
     .cam1 {
