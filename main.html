@@ -75,14 +75,15 @@
                     <p class="description">
                         FRTs commonly perform analysis on quasi-unique facial features to draw matches (e.g. distance between eyes, depth of eye sockets, cheekbone shape, lip contour).
                         By identifying these features, the image is converted to data by transforming the details about the face into numeric data called
-                        a <b>face print</b>.
+                        a <b>face print</b> (Kaspersky, 2022).
                     </p>
-                    <img class="faceprint" alt="Face print" src="images/faceprint.jpg" style="border: 1rem solid #1d1d1d;">
+                    <img class="faceprint" alt="Face print" src="images/faceprint.jpg" style="border: 12px solid salmon;">
+                    <p class="center-text"><a style="color: rgb(0, 0, 0);" href="https://www.theguardian.com/technology/2014/may/04/facial-recognition-technology-identity-tesco-ethical-issues" target="_blank">Source</a></p>
                     <p class="description end">
                         Since the most common use of FRT is facial recognition, the face print is compared to many face prints in a database to determine a match (1-to-many comparison).
                         Most implmentations utilize a similarity score amongst the comparions with the face print, and the matching threshold is chosen by the user. In fact,
                         FRTs are not always used to intentionally find a positive match. Sometimes, the data is used to only calculate a <b>probability match score</b>, which
-                        are ranked and left to a human decision maker for the final call.
+                        are ranked and left to a human decision maker for the final call (Electronic Frontier Foundation, 2017).
                     </p>
                 </div>
             </section>
@@ -90,45 +91,46 @@
             <section class="use2">
                 <p class="section-title">Common Uses</p>
                 <div class="use-table">
-                    <div class="use-item"><img src="images/airport.png" class="responsive"><p class="description" style="width: 13rem;">
-                        Airports have begun to utilize FRT to collect biometric data on travelers for security purposes. In fact,
-                        the Department of Homeland Security estimates that FRT will be used on approximately 97% of travelers by 2023 (Frew 2019).
+                    <div class="use-item"><img src="images/airport.png" class="responsive">
+                        <p class="description use-desc" style="width: 13rem;">
+                            Airports have begun to utilize FRT to collect biometric data on travelers for security purposes. In fact,
+                            the Department of Homeland Security estimates that FRT will be used on approximately 97% of travelers by 2023 (Frew, 2019).
                         </p>
                     </div>
                     <div class="use-item">
                         <img src="images/bank.png" class="responsive">
-                        <p class="description" style="width: 13rem;">
+                        <p class="description use-desc" style="width: 13rem;">
                             Banking apps, such as Wells Fargo and Disocver, have begun to use face verification to allow
-                            users to streamline their logon experience.
+                            users to streamline their login experience.
                         </p>
                     </div>
                     <div class="use-item">
                         <img src="images/health.png" class="responsive">
-                        <p class="description" style="width: 13rem;">
+                        <p class="description use-desc" style="width: 13rem;">
                             Some healthcare softwares have been developed which allow easier access to patient records,
-                            patient registration, and even pain/emotional detection through use of FRTs.
+                            patient registration, and even pain/emotional detection through use of FRTs (Kaspersky, 2022).
                         </p>
                     </div>
                     <div class="use-item">
                         <img src="images/law.jpg" class="responsive">
-                        <p class="description" style="width: 13rem;">
+                        <p class="description use-desc" style="width: 13rem;">
                             Law enforcement often utilizes security cameras and 1-to-many comparisons to identify 
                             faces of recorded suspects. Mugshots are used as the comparison gallery to derive face prints.
-                            More on this in the "Harm" section...
+                            More on this in the "Harm" section...(Electronic Frontier Foundation, 2017).
                         </p>
                     </div>
                     <div class="use-item">
                         <img src="images/phone.png" class="responsive">
-                        <p class="description" style="width: 13rem;">
+                        <p class="description use-desc" style="width: 13rem;">
                             If you've subscribed to Apple's "FaceID", then you are engaging in face verification everyday!
                             Your phone saves your face print in order to perform a 1-to-1 comparison at every unlock.
                         </p>
                     </div>
                     <div class="use-item">
                         <img src="images/retail.png" class="responsive">
-                        <p class="description" style="width: 13rem;">
+                        <p class="description use-desc" style="width: 13rem;">
                             FRT is said to have the "potential" to streamline the retail experience, with ambitions such as
-                            payment through face verification and product suggestion based on recurring faces.
+                            payment through face verification and product suggestion based on recurring faces (Kaspersky, 2022).
                         </p>
                     </div> 
                 </div>
@@ -143,24 +145,71 @@
                         In addition to the common argument against FRT in regards to privacy concerns, there exists a plethora of other harmful aspects which particulary affect marginalized
                         communities and should be considered foremost. Research has shown a presence of racial discrimination in FRT systems on a technical level. 
                         For instance, according to an empirical analysis on FRT use when identifying emotions across different ethnicities, both Microsoft and Face++ FRTs score black faces 
-                        as having a <span style="color: red;">“lower level of happiness”</span> than white faces (Rhue 2018). Furthermore, Face++, who claim to have “Industry-leading accuracy, in real-world applications” 
-                        (“Face++ Cognitive Sciences”), rates black faces as significantly <span style="color: red;">more angry on average</span> than white faces. Microsoft exhibits the same prejudice in terms of recognizing contempt.
+                        as having a <span style="color: red;">“lower level of happiness”</span> than white faces (Rhue, 2018). Furthermore, Face++, who claim to have “Industry-leading accuracy, in real-world applications” 
+                        (FacePlusPlus, 2022), rates black faces as significantly <span style="color: red;">more angry on average</span> than white faces. Microsoft exhibits the same prejudice in terms of recognizing contempt.
                     </p>
+                    <p class="description">
+                        Inaccuracy of emotion recognition is not the only common data failure when examining FRT error rates. In fact, the "Gender Shades" project 
+                        applied an intersectional approach to the accuracy of FRTs, and discovered that FRT in companies like Microsoft, Amazon, and IBM <span style="color: red;">performed worse
+                        on darker-skinned females</span>(see chart below). The error rates went up by 34% for these women when compared with lighter-skinned males (Najibi, 2019). Furthermore, the common statement that FRTs are 99% 
+                        accurate is misleading. First off, this rating is gathered under ideal conditions with consistent environmental factors (such as lighting). This is not always the case in 
+                        real-world conditions, and thus that 99% accuracy begins to plummet in practice (NEC, 2020). Even assuming that this accuracy rating holds, Buolamwini et. al. make a great point in that
+                        seemingly small error rates can still have a negative impact on a substantial number of individuals. Thus, inaccuracies are a serious issue, and predominantly affect minority ethnicities
+                        (who are not represented in the training data). Additionally, the FRT is only as accurate as the data set, so considerations must be made 
+                        as to where the FRT will be implemented (i.e. in a location that is mostly homogenous or diverse).
+                    </p>
+                    <img class="chart" alt="Chart" src="images/table.png">
+                    <p class="center-text"><a style="color: rgb(0, 0, 0);" href="https://sitn.hms.harvard.edu/flash/2020/racial-discrimination-in-face-recognition-technology/" target="_blank">Source</a></p>
                 </div>
                 <div class="section-card">
                     <p class="subtitle center-text">Disproportionate use on vulnerable populations</p>
                     <p class="description">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Autem libero beatae eum ipsam reiciendis earum in dolores sint iusto! Adipisci mollitia 
-                        impedit tenetur assumenda aliquam vel optio repudiandae? Ullam, voluptatibus!
+                        Another pressing matter is the actual implmentation of these discriminatory FRTs. One such example is its use by US Immigration and Customs
+                        Enforcement (ICE) in Maryland during 2020 to target undocumented immigrants, a highly vulnerable population. ICE officials performed a mass 
+                        facial recognition search on millions of Maryland driver licenses <span style="color: red;">without public, state, or court approval</span> (since FRT is so new, there is little
+                        regulation/precedent preventing them from doing so). This scan was an attempt to find matches between license photos and undocumented immigrants,
+                        in order to arrest and most likely deport them. The reason for Maryland as this operation's target was that Maryland became one of the first states to
+                        not require proof of legal status when applying for a driver's license (Harwell and Cox, 2020).
+                    </p>
+                    <p class="description">
+                        Even looking past the argument of what it means to be "legal" in America, there are plenty of reasons as to why this use of FRT is unjust:
+                        <p class="description">●  Breach of social contract between citizens and their government (ICE performed the scan without consent or public approval)</p>
+                            <p class="description">●  Dangerous precedent of government body performing mass facial recognition scans, and potentially misidentifying and pursuing the wrong individual</p>
+                                    <p class="description">●  Error rates are higher amongst non-white ethnicites, which are the majority of undocumented immigrants</p>
+                    </p>
+                    <p class="description">
+                        Further evidence of disproportionate use comes from New York City. The NYPD is said to have state of the art FRT systems, which foremost violates
+                        the idea that NYC is a sanctuary city, as it places immigrants at risk of deportation (as seen above with ICE's scan in Maryland). Another similarity with ICE,
+                        the NYPD Intelligence Division has engaged in warrantless surveillance of predominantly Muslim neighborhoods, and utilizes its gang database for 1-to-many comparisons
+                        in surveillance. We see another disproportionality with the gang database, as the "Surveillance Technology Oversight Project" (an organization designed to address the increase
+                        in use of surveillance technologies) points out, white supremacists and right-wing organizations are "systematically" omitted. 
                     </p>
                 </div>
                 <div class="section-card">
                     <p class="subtitle center-text">False arrests</p>
+                    <p class="description">
+                        A frightening reality that is currently taking shape is false arrests on account of false positive facial recognitions. With the increase use of FRTs in law enforcement, the aforementioned error rates
+                        have begun to result in real world consequences. There are 3 popular cases of such wrongful arrests, and all 3 happen to be Black (recall that facial recognition of dark-skinned individuals have higher error rates):
+                    </p>
+                    <p class="description">
+                        <span style="font-weight: bold;">Nijeer Parks</span> - In February of 2019, a fake ID was left behind at a crime scene after a suspect shoplifted and fled in a rented vehicle (after nearly hitting police officers with said vehicle).
+                        A detective in a NJ precinct sent the photo to a state body with access to FRT, and it reported a match with Mr. Parks. After being notified that the police were looking for him, Parks went to the station to inquire, but was arrested instead,
+                        <span style="color: red;">devoid of any evidence besides the FRT use</span>. Since Parks had a criminal history, he even considered taking a plea deal for this crime he did not commit, just to avoid a potentially harsh sentence (up to 25 years). Overall, <span style="color: red;">Parks spent 10 days in jail, 
+                        paid approximately $5,000 for defense, and had to wait for almost a year</span>before the charges were dropped, as it was later proven he was 30 miles away when the crime took place (Hill, 2021). Parks mentioned how "the false accusation divided those closest to him into 
+                        two groups: people who stood by him after the arrest, and family and friends who didn’t want to be around him. In part because of the arrest, Parks says he’s no longer with his fiancée," (Johnson, 2022).
+                    </p>
+                    <p class="description">
+                        <span style="font-weight: bold;">Michael Oliver</span> - In July of 2019, Mr. Oliver was arrested at a traffic stop after a warrant was issued, accusing him of throwing a teacher's smartphone from a video of that same phone. Oliver's face was matched
+                        by FRT with the face shown in the video of the alleged crime, but he was at work during this time. The arrest took a heavy toll on Oliver, as <span style="color: red;">he lost his job and was not able to return to normal life until a year later</span>. The charges were ultimately dropped after
+                        prosecutors and the public defender noticed that the person in the video was not him (he has tattoos and the suspect did not) (Johnson, 2022).
+                    </p>
+                    <p class="description">
+                        <span style="font-weight: bold;">Robert Williams</span> - In January of 2020, Mr. Williams was arrested in his front lawn, in front of all his neighbors, after being falsely identified by FRT as a suspect which stole
+                        five watches from a Shinola store. In fact, Williams was investigated by the same detective as Oliver. What is even more ironic is that in July of 2019, even before Oliver's arrest, former police chief of Detroit James Craig
+                        stated that police would <span style="color: red;">never use FRT as a sole reason for arrest</span>, and then two cases followed which immediately contradicted this statement (Johnson, 2022).
+                    </p>
                     <p class="description end">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Autem libero beatae eum ipsam reiciendis earum in dolores sint iusto! Adipisci mollitia 
-                        impedit tenetur assumenda aliquam vel optio repudiandae? Ullam, voluptatibus!
+                        It is evident how FRT disproportionately harms marginalized communities, which leads us to discuss how can we solve this increasingly severe problem?
                     </p>
                 </div>
             </section>
@@ -171,26 +220,31 @@
                 <div class="section-card">
                     <p class="subtitle center-text">Prevention</p class="subtitle center-text">
                     <p class="description">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Autem libero beatae eum ipsam reiciendis earum in dolores sint iusto! Adipisci mollitia 
-                        impedit tenetur assumenda aliquam vel optio repudiandae? Ullam, voluptatibus!
+                        The problem of inaccuracy typically stems from a biased data set, i.e. the faces that the FRT is trained to recognize are <span style="color: red;">too homogenous</span>.
+                        Therefore, the most effective method of solving inaccuracies is to prevent them from happening in the first place by <span style="color: red;">increasing dataset diversity</span>. Furthermore, if we look back
+                        on the idea of FRTs being trained in "ideal conditions" (NEC, 2020), a solution would be to <span style="color: red;">ensure a standardized image quality</span> amongst devices using a certain FRT. For instance, cameras are not properly
+                        equipped to capture dark skin all the time, which creates higher error rates for dark-skinned individuals (Najibi, 2019).
                     </p>
                 </div>
                 <div class="section-card">
-                    <p class="subtitle center-text">Data bias</p>
+                    <p class="subtitle center-text">Regulation</p>
                     <p class="description">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Autem libero beatae eum ipsam reiciendis earum in dolores sint iusto! Adipisci mollitia 
-                        impedit tenetur assumenda aliquam vel optio repudiandae? Ullam, voluptatibus!
+                        To enforce better quality data and FRTs, <span style="color: red;">regulations need to be established</span>. Due to how new FRT is, there is a lack of laws or regulations which restrict or audit its use. We saw this with ICE, and the Detroit and NJ police
+                        departments. To improve dataset diversity, <span style="color: red;">regulatory ethical auditing</span> should be industry standard, or even third-party legislative bodies which monitor
+                        the use of a company's FRT. This will establish a <span style="color: red;">baseline accuracy and representation</span> that FRTs need to reach in order to be considered "safe" for use. In addition, <span style="color: red;">restrictions to data sharing</span> can be made (West, 2019). This will effectively 
+                        reduce certain organizations' powers from accessing data such driver's license photos (as seen in Maryland). Furthermore, greater transparency in its use would help quell general privacy concerns.
                     </p>
                 </div>
                 <div class="section-card">
-                    <p class="subtitle center-text">Usefulness</p>
-                    <p class="description end">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Autem libero beatae eum ipsam reiciendis earum in dolores sint iusto! Adipisci mollitia 
-                        impedit tenetur assumenda aliquam vel optio repudiandae? Ullam, voluptatibus!
+                    <p class="subtitle center-text">Counter</p>
+                    <p class="description">
+                        In some cases, people would rather just maintain anonymity in the face of FRT. Luckily, there are people who have begun to research how to do so: 
                     </p>
+                    <p class="description"><a style="color: aquamarine;" href="https://onezero.medium.com/you-can-fool-a-popular-facial-recognition-systems-with-sunglasses-4905ed3a59b0" target="_blank">This article</a> outlines how something simple 
+                    like wearing a mask can disrupt FRT at events such as protests, a constitutional right which should not be infringed upon by breaches of privacy.</p>
+                    <p class="description"><a style="color: aquamarine;" href="https://www.youtube.com/watch?v=zOs_FvNl2K0" target="_blank">This video</a> demonstrates some unique ways
+                    of evading surveillance software for the sake of privacy, and how one person has sacrifice their face for the greater good.</p>
+                    <p class="description end"></p>
                 </div>
             </section>
 
@@ -198,33 +252,30 @@
             <section class="survey" id="survey">
                 <p class="section-title" style="margin-top: 7rem;"><b>Survey Results</b></p>
                 <div class="section-card">
-                    <p class="subtitle center-text">What</p>
-                    <p class="description">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Autem libero beatae eum ipsam reiciendis earum in dolores sint iusto! Adipisci mollitia 
-                        impedit tenetur assumenda aliquam vel optio repudiandae? Ullam, voluptatibus!
-                    </p>
-                </div>
-                <div class="section-card">
-                    <p class="subtitle center-text">Where</p>
-                    <p class="description">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Autem libero beatae eum ipsam reiciendis earum in dolores sint iusto! Adipisci mollitia 
-                        impedit tenetur assumenda aliquam vel optio repudiandae? Ullam, voluptatibus!
-                    </p>
-                </div>
-                <div class="section-card">
-                    <p class="subtitle center-text">Why</p>
+                    <p class="subtitle center-text">Results not available</p>
                     <p class="description end">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Autem libero beatae eum ipsam reiciendis earum in dolores sint iusto! Adipisci mollitia 
-                        impedit tenetur assumenda aliquam vel optio repudiandae? Ullam, voluptatibus!
+                        Survey is still in progress, please standby.
                     </p>
                 </div>
             </section>
 
             <section class="sources" id="sources">
                 <p class="section-title"><b>Sources</b></p>
+                <div class="section-card">
+                    <p class = "description">BUOLAMWINI, J., ORDóñEZ, V., MORGENSTERN, J., and LEARNED-MILLER, E., 2020. Facial Recognition Technologies: A Primer. <i>Wild: A Call for a Federal Office</i>. https://people.cs.umass.edu/~elm/papers/FRTprimer.pdf.</p>
+                    <p class= "description">ELECTRONIC FRONTIER FOUNDATION. 2017. Face Recognition. <i>Street-Level-Surveillance</i>. https://www.eff.org/pages/face-recognition.</p>
+                    <p class= "description">FACEPLUSPLUS. 2022. Face++ Cognitive Services. https://www.faceplusplus.com/</p>
+                    <p class= "description">FREW J. 2019. How Facial Recognition Search Is Destroying Your Privacy. <i>Make Use Of</i>. https://www.makeuseof.com/tag/facial-recognition-invading-privacy/.</p>
+                    <p class= "description">HARWELL, D. and COX, E. 2020. ICE has run facial-recognition searches on millions of Maryland drivers. <i>The Washington Post</i>. https://www.washingtonpost.com/technology/2020/02/26/ice-has-run-facial-recognition-searches-millions-maryland-drivers/.</p>
+                    <p class= "description">HILL K. 2021. Another Arrest, and Jail Time, Due to a Bad Facial Recognition Match. <i>The New York Times</i>. https://www.nytimes.com/2020/12/29/technology/facial-recognition-misidentify-jail.html.</p>
+                    <p class= "description">JOHNSON K. 2022. How Wrongful Arrests Based on AI Derailed 3 Men's Lives. <i>Wired</i>. https://www.wired.com/story/wrongful-arrests-ai-derailed-3-mens-lives/#:~:text=Robert%20Williams%2C%20Michael%20Oliver%2C%20and,impact%20cast%20a%20long%20shadow.&text=Robert%20Williams%20was%20doing%20yard,needed%20a%20family%20meeting%20immediately.</p>
+                    <p class= "description">KASPERSKY. 2022. What is Facial Recognition - Definition and Explanation. <i>Resource Center</i>. https://www.kaspersky.com/resource-center/definitions/what-is-facial-recognition.</p>
+                    <p class= "description">NAJIBI, A. 2020. Racial Discrimination in Face Recognition Technology. <i>Science in the News</i>. https://sitn.hms.harvard.edu/flash/2020/racial-discrimination-in-face-recognition-technology/.</p>
+                    <p class= "description">NEC NEW ZEALAND. 2020. How effective is facial recognition? <i>Publications & Media</i>. https://www.nec.co.nz/market-leadership/publications-media/how-effective-is-facial-recognition/.</p>
+                    <p class= "description">RHUE, L. 2018. Racial Influence on Automated Perceptions of Emotions. <i>The Social Science Research Network</i>. papers.ssrn.com/sol3/papers.cfm?abstract_id=3281765.</p>
+                    <p class= "description">SURVEILLANCE TECHNOLOGY OVERSIGHT PROJECT. 2019. Organizational Summary. https://static1.squarespace.com/static/5c1bfc7eee175995a4ceb638/t/5da27013ae57b1663c35cd0c/1570926611978/2019-10-11+STOP+Project+Summary+v7+.pdf.</p>
+                    <p class= "description">WEST D. 2019. 10 actions that will protect people from facial recognition software. <i>Bookings</i>. https://www.brookings.edu/research/10-actions-that-will-protect-people-from-facial-recognition-software/.</p>
+                </div>
             </section>
         </div>
     </body>
